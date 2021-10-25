@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .forms import SignUpForm
 
 
 def home(request):
@@ -6,4 +7,5 @@ def home(request):
 
 
 def sign_up(request):
-    return render(request, 'sign_up.html')
+    form = SignUpForm()
+    return render(request, 'sign_up.html', {'form': form})

@@ -8,20 +8,7 @@
         <h1>Sign up</h1>
         <form action="{% url 'sign_up' %}" method="post"></form>
             {% csrf_token %}
-            <label for="first_name">First name:</label>
-            <input id="first_name" type="text">
-            <label for="last_name">Last name:</label>
-            <input id="last_name" type="text">
-            <label for="username">Username:</label>
-            <input id="username" type="text">
-            <label for="email">Email:</label>
-            <input id="email" type="email">
-            <label for="bio">Bio:</label>
-            <input id="bio" type="text">
-            <label for="new_password">Password:</label>
-            <input id="new_password" type="password">
-            <label for="password_confirmation">Password Confirmation:</label>
-            <input id="password_confirmation" type="password">
+            {{ form.as_p }}
             <input type="submit" value="Sign up">
     </body>
 </html>
