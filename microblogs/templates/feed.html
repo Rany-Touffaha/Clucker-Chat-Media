@@ -6,6 +6,9 @@
 </head>
     <body>
         <h1>Feed</h1>
-        <p>Include the Post function here</p>
+        <form action="{% url 'feed' %}" method="post"></form>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="New Post">
     </body>
 </html>

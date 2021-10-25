@@ -1,6 +1,6 @@
 from django.core.validators import RegexValidator
 from django import forms
-from .models import User
+from .models import User, Post
 
 
 class SignUpForm(forms.ModelForm):
@@ -35,6 +35,19 @@ class SignUpForm(forms.ModelForm):
             email=self.cleaned_data.get('email'),
             bio=self.cleaned_data.get('bio'),
             password=self.cleaned_data.get('new_password'),
-
         )
         return user
+
+
+class PostForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = ['text']
+        widgets = {'text': forms.Textarea()}
+
+    def save(self):
+        super().save(commit=False)
+        post = Post.objects.create(
+            text=self.cleaned_data.get('text')
+        )
+        return post
