@@ -9,7 +9,7 @@ class Command(BaseCommand):
         self.faker = Faker('en_GB')
 
     def handle(self, *args, **options):
-        for i in range(1, 100):
+        for i in range(0, 100):
             try:
                 fakeUser = User.objects.create_user(username='@' + self.faker.user_name(),
                                                     password=self.faker.password(), first_name=self.faker.first_name(),
