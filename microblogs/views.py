@@ -1,5 +1,5 @@
 from django.contrib import messages
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import redirect, render
 from .forms import SignUpForm, PostForm, LogInForm
 
@@ -28,6 +28,10 @@ def log_in(request):
     return render(request, 'log_in.html', {'form': form})
     #return render(request, 'log_in.html')
 
+
+def log_out(request):
+    logout(request)
+    return redirect('home')
 
 def sign_up(request):
     if request.method == 'POST':
