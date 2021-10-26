@@ -169,3 +169,4 @@ class UserModelTest(TestCase):
             bio="This is Jane's profile"
         )
         return user
+
