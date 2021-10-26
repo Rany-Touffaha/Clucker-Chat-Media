@@ -6,7 +6,7 @@ from microblogs.forms import SignUpForm
 from microblogs.models import User
 
 
-class SignUpFormTestCase(TestCase):
+class SignUpViewTestCase(TestCase):
     """Unit tests for the sign up view"""
 
     def setUp(self):
