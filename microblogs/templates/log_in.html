@@ -6,6 +6,9 @@
 </head>
     <body>
         <h1>Log in</h1>
-        <p>The place for free range conversation</p>
+        <form action="{% url 'log_in' %}" method="post"></form>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Log In">
     </body>
 </html>

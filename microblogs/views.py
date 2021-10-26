@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-from .forms import SignUpForm, PostForm
+from .forms import SignUpForm, PostForm, LogInForm
 
 
 def home(request):
@@ -12,9 +12,9 @@ def feed(request):
 
 
 def log_in(request):
-    #form = PostForm()
-    #return render(request, 'feed.html', {'form': form})
-    return render(request, 'log_in.html')
+    form = LogInForm()
+    return render(request, 'log_in.html', {'form': form})
+    #return render(request, 'log_in.html')
 
 
 def sign_up(request):
