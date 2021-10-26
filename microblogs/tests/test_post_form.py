@@ -1,4 +1,4 @@
-"""Unit tests for the Post Form"""
+"""Unit tests for the post form"""
 from django import forms
 from django.test import TestCase
 from microblogs.forms import PostForm
@@ -6,7 +6,7 @@ from microblogs.models import Post
 
 
 class PostFormTestCase(TestCase):
-    """Unit tests for the Sign up Form"""
+    """Unit tests for the post form"""
 
     def setUp(self):
         self.form_input = {

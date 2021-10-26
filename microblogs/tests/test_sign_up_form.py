@@ -1,4 +1,4 @@
-"""Unit tests for the Sign up Form"""
+"""Unit tests for the sign up form"""
 from django import forms
 from django.test import TestCase
 from microblogs.forms import SignUpForm
@@ -6,7 +6,7 @@ from microblogs.models import User
 from django.contrib.auth.hashers import check_password
 
 class SignUpFormTestCase(TestCase):
-    """Unit tests for the Sign up Form"""
+    """Unit tests for the sign up form"""
 
     def setUp(self):
         self.form_input = {

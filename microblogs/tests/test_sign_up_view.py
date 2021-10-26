@@ -1,4 +1,4 @@
-"""Unit tests for the Sign up View"""
+"""Unit tests for the sign up view"""
 from django.contrib.auth.hashers import check_password
 from django.test import TestCase
 from django.urls import reverse
@@ -7,7 +7,7 @@ from microblogs.models import User
 
 
 class SignUpFormTestCase(TestCase):
-    """Unit tests for the Sign up View"""
+    """Unit tests for the sign up view"""
 
     def setUp(self):
         self.url = reverse('sign_up')

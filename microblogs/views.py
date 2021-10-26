@@ -11,6 +11,12 @@ def feed(request):
     return render(request, 'feed.html', {'form': form})
 
 
+def log_in(request):
+    #form = PostForm()
+    #return render(request, 'feed.html', {'form': form})
+    return render(request, 'log_in.html')
+
+
 def sign_up(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
