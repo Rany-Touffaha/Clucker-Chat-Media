@@ -5,11 +5,12 @@
     <title>Clucker</title>
 </head>
     <body>
-        <h1>Sign up</h1>
-        <form action="{% url 'sign_up' %}" method="post">
+        <h1>New Post</h1>
+        <p>{{user.username}}</p>
+        <form action="{% url 'new_post' %}" method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <input type="submit" value="Sign up">
+            <input type="submit" value="New Post">
         </form>
     </body>
 </html>

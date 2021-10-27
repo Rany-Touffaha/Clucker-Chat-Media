@@ -6,9 +6,10 @@
 </head>
     <body>
         <h1>Feed</h1>
-        <form action="{% url 'feed' %}" method="post"></form>
-            {% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit" value="New Post">
+        <p> Please find you posts below: </p>
+        {% for post in postList %}
+                <p> {{post.author}} </p>
+                <p> {{post.text}} </p>
+        {% endfor %}
     </body>
 </html>
