@@ -7,7 +7,8 @@
     <body>
         <h1>User List</h1>
         {% for user in userList %}
-                <p><a href="{% url 'show_user' user.id %}" >{{user.id}}</a>{{user.username}}, {{user.first_name}}, {{user.last_name}}</p>
+                <p><a href="{% url 'show_user' user.id %}" >{{user.id}}</a>{{user.username}}, {{user.first_name}},
+                    {{user.last_name}}</p>
         {% endfor %}
     </body>
 </html>
