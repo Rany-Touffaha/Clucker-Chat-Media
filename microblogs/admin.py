@@ -11,6 +11,7 @@ class UserAdmin(admin.ModelAdmin):
         'username', 'first_name', 'last_name', 'email', 'is_active'
     ]
 
+
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
     """Configuration of the admin interface for users."""
